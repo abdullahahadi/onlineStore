@@ -3,3 +3,4 @@ Architectural Rules:
 1- In the route files, any URI must be only connected to controller methods.
 2- Putting application logic inside a route file is NOT allowed.
 3- Controllers should only pass an associative array called viewData to the views.
+4- Models’ attributes must be accessed through their corresponding getters and setters
