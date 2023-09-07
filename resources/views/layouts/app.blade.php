@@ -48,7 +48,6 @@
     </div>
 <!-- footer -->
 
-<script src="{{asset('/js/bootstrap.bundle.min.js')}}" crossorigin="anonymous">
-</script>
+<script src="{{asset('/js/bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>
