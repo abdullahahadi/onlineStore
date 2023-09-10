@@ -17,26 +17,27 @@ class AdminProductController extends Controller
 
     public function store(Request $request) {
 
+        // dd($request->all());
         $request->validate([
             "name" => "required|max:255",
             "description" => "required",
             "price" => "required|numeric|gt:0",
-            'imgae' => 'image'
+            'image' => 'image'
         ]);
 
-
+        
         $newProduct = new Product();
         $newProduct->setName($request->input('name'));
         $newProduct->setDescription($request->input('description'));
         $newProduct->setPrice($request->input('price'));
         $newProduct->setImage("game.png");
         $newProduct->save();
-
+        
         if ($request->hasFile('image')) {
             $imageName = $newProduct->getId().".".$request->file('image')->extension();
             //The public disk stores files in storage/app/public folder by default. 
             //The put method will store our product images over the public disk.
-
+            
             Storage::disk('public')->put(
                 $imageName,
                 file_get_contents($request->file('image')->getRealPath())
