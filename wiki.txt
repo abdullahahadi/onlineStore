@@ -4,3 +4,4 @@ Architectural Rules:
 2- Putting application logic inside a route file is NOT allowed.
 3- Controllers should only pass an associative array called viewData to the views.
 4- Models’ attributes must be accessed through their corresponding getters and setters
+5- validations must be done in a model method called validate or in the location of your preference (but not in controllers).
