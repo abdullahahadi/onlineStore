@@ -11,7 +11,7 @@ public function index(Request $request)
     $productsInCart = [];
     $productsInSession = $request->session()->get("products");
     if ($productsInSession) {
-    $productsInCart = Product::findMany(array_keys($productsInSession));
+        $productsInCart = Product::findMany(array_keys($productsInSession));
     $total = Product::sumPricesByQuantities($productsInCart, $productsInSession);
 }
     $viewData = [];
