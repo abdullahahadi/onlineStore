@@ -19,6 +19,7 @@
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link active" href="{{route('home.index')}}">Home</a>
                     <a class="nav-link active" href="{{route('product.index')}}">Product</a>
+                    <a class="nav-link active" href="{{ route('cart.index') }}">Cart</a>    
                     <a class="nav-link active" href="{{route('home.about')}}">About</a>
 
                     <div class="vr bg-white mx-2 d-none d-lg-block"></div>
